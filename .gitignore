@@ -1,5 +1,8 @@
 # Folders
+_cache
+node_modules
 vendor
 
 # Files
 composer.lock
+package-lock.json
