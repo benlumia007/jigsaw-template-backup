@@ -33,6 +33,8 @@ $benlu->boot();
 /**
  * Add default content types.
  */
+Benlumia007\Alembic\ContentTypes::add( 'author', new Benlumia007\Alembic\Entry\Types\Author( $benlu->routes ) );
+Benlumia007\Alembic\ContentTypes::add( 'post', new Benlumia007\Alembic\Entry\Types\Post( $benlu->routes ) );
 Benlumia007\Alembic\ContentTypes::add( 'page', new Benlumia007\Alembic\Entry\Types\Page( $benlu->routes ) );
 
 /**
@@ -43,7 +45,7 @@ Benlumia007\Alembic\ContentTypes::registerRoutes();
 /**
  * Register home content type
  */
-$benlu->routes->get( '/', Benlumia007\Alembic\Entry\Controllers\Home::class );
+$benlu->routes->get( '/', Benlumia007\Alembic\Entry\Controllers\Blog::class );
 
 // Launch the current controller.
 $current = $benlu->routes->current();
