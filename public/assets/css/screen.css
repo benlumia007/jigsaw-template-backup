@@ -79,7 +79,8 @@ h6 {
 }
 .site-header .branding-navigation .site-branding .site-title a {
   border-bottom: none;
-  color: color(black);
+  color: #000000;
+  color: var(--black, #000000);
   text-decoration: none;
 }
 .site-header .branding-navigation .site-branding .site-description {
