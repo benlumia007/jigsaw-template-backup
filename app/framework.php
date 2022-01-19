@@ -45,7 +45,8 @@ Benlumia007\Alembic\ContentTypes::registerRoutes();
 /**
  * Register home content type
  */
-$benlu->routes->get( '/', Benlumia007\Alembic\Entry\Controllers\Blog::class );
+$benlu->routes->get( '/blog', Benlumia007\Alembic\Entry\Controllers\Blog::class );
+$benlu->routes->get( '/', Benlumia007\Alembic\Entry\Controllers\Home::class );
 
 // Launch the current controller.
 $current = $benlu->routes->current();
