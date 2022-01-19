@@ -10,7 +10,7 @@
 ?>
 <article class="post">
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?= e( $entry->uri() ) ?>"><?= e( $entry->title() ) ?></a></h1>
+		<h1 class="entry-title"><?= e( $entry->title() ) ?></h1>
 		<div class="entry-metadata">
 		<?php if ( $entry->author() ) : ?>
 				<span class="entry-author"><?php include( public_path( 'images/svg/user.svg.php' ) ); ?><a href="<?= e( $entry->author()->uri() ); ?>"><?= e( $entry->author()->title() ) ?></a></span>
