@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'siteName' => 'Benjamin Lu'
+    'siteName'        => 'Benjamin Lu',
+    'siteDescription' => 'Life & Joy'
 ];

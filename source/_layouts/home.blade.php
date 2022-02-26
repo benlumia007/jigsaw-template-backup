@@ -24,7 +24,20 @@
                     <h3 class="site-description">{{ $page->siteDescription }}</h3>
                 </div>
             </div>
+            <nav id="primary" class="menu-primary">
+                <button class="menu-toggle" onclick="myFunction()"><?= e( 'Menu' ); ?></button>
+                <ul class="menu-items">
+                    <li class="menu-item"><a href="/">Home</a></li>
+                    <li class="menu-item"><a href="/about-me">About Me</a></li>
+                </ul>
+            </nav>
         </header>
+        @yield( 'body' )
+        <footer id="footer" class="site-footer">
+            <div class="site-info">
+                Powered by love and heart
+            </div>
+        </footer>
     </section>
 </body>
 </html>
