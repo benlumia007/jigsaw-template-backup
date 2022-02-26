@@ -14,6 +14,7 @@
     <title>{{ $page->siteName }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ mix( 'css/screen.css', 'assets' ) }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section id="container" class="site-container">
@@ -24,13 +25,13 @@
                     <h3 class="site-description">{{ $page->siteDescription }}</h3>
                 </div>
             </div>
-            <nav id="primary" class="menu-primary">
+<!--             <nav id="primary" class="menu-primary">
                 <button class="menu-toggle" onclick="myFunction()"><?= e( 'Menu' ); ?></button>
                 <ul class="menu-items">
                     <li class="menu-item"><a href="/">Home</a></li>
                     <li class="menu-item"><a href="/about-me">About Me</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </header>
         @yield( 'body' )
         <footer id="footer" class="site-footer">
