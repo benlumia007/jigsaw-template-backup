@@ -6,7 +6,7 @@
             <article class="post">
                 <header class="entry-header">
                     <div class="entry-metadata">
-                        {{ date('F d, Y', $page->date) }}
+                        <span class="entry-date">{{ date('F d, Y', $page->date) }}</span>
                     </div>
                     <h1 class="entry-title">{{ $page->title }}</h1>
                 </header>

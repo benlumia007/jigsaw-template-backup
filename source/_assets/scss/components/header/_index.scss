@@ -19,38 +19,67 @@
 // Imports all of the files needed for front-end output. Note that the order is
 // very specific and should typically not be changed.
 
-.site-header {
-	background: #fcfcfc;
-	border-bottom: 0.063em solid #f3f3f3;
+@media screen and ( max-width: 480px ) {
+	.site-header {
+		background: #fcfcfc;
+		border-bottom: 0.063em solid #f3f3f3;
 
-	.branding-navigation {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-gap: 1.25rem;
+		.branding-navigation {
+			.site-branding {
+				padding: 1.125rem;
+				text-align: center;
 
-		.site-branding {
-			.site-title,
-			.site-description {
-				margin: 0;
-				padding: 0;
-			}
+				.site-title,
+				.site-description {
+					margin: 0;
+					padding: 0;
+				}
 
-			.site-title {
-				float: left;
-				font-size: 2rem;
-				padding: 0.5rem;
-
-				a {
-					border-bottom: none;
-					color: color( black );
-					text-decoration: none;
+				.site-title {
+					a {
+						color: color( black );
+						text-decoration: none;
+					}
 				}
 			}
+		}
+	}
+}
 
-			.site-description {
-				float: left;
-				font-size: 1.250rem;
-				padding: 1rem;
+@media screen and ( min-width: 1170px ) {
+	.site-header {
+		background: #fcfcfc;
+		border-bottom: 0.063em solid #f3f3f3;
+	
+		.branding-navigation {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 1.25rem;
+	
+			.site-branding {
+				.site-title,
+				.site-description {
+					margin: 0;
+					padding: 0;
+				}
+	
+				.site-title {
+					float: left;
+					font-size: 2rem;
+					padding: 0.5rem;
+	
+					a {
+						border-bottom: none;
+						color: color( black );
+						text-decoration: none;
+					}
+				}
+	
+				.site-description {
+					float: left;
+					font-size: 1.250rem;
+					padding: 1rem;
+				}
 			}
 		}
 	}

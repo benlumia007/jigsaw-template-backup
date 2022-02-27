@@ -14,7 +14,10 @@
     <title>{{ $page->siteName }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ mix( 'css/screen.css', 'assets/scripts' ) }}">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Merriweather:wght@400;700&family=Tangerine&display=swap" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
     <section id="container" class="site-container">
@@ -22,7 +25,7 @@
             <div class="branding-navigation">
                 <div class="site-branding">
                     <h1 class="site-title"><a href="/">{{ $page->siteTitle }}</a></h1>
-                    <h3 class="site-description">{{ $page->siteDescription }}</h3>
+                    <span class="site-description">{{ $page->siteDescription }}</span>
                 </div>
                 <nav id="primary" class="menu-primary">
                     <button class="menu-toggle"><?= e( 'Menu' ); ?></button>

@@ -1,3 +1,74 @@
+@media screen and ( max-width: 480px ) {
+    .menu-primary {
+        display: block;
+        width: 100%;
+
+        .menu-toggle {
+            background: color( color( black ) );
+            border: 0.125rem solid color( white );
+            bottom: 1.125rem;
+            color: color( white );
+            cursor: pointer;
+            display: block;
+            font-family: font-family( primary );
+            left: 1.125rem;
+            padding: 0.5rem 1rem;
+            position: fixed;
+
+            &.hide {
+                bottom: -2.25rem;
+                transition: ease-in-out 0.5;
+            }
+        }
+    
+        .menu-items {
+            background: color( color( black) );
+            bottom: 1rem;
+            display: none;
+            list-style-type: none;
+            margin: 0;  // do not touch
+            padding: 0; // do not touch
+    
+            .menu-item {
+                margin: 0;
+                padding: 0.813rem 1rem;
+
+                a {
+                    color: color( white );
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &.toggled {
+            bottom: 3rem;
+            margin: 0;
+            position: fixed;
+
+            .menu-items {
+                display: block;
+                margin: 1.125rem;
+
+                .menu-item {
+                    a {
+                        border-bottom: none;
+                        color: color( white );
+                        text-decoration: none;
+    
+                        &.active {
+                            color: #ffffff;
+                            pointer-events: none;
+                            cursor: default;
+                        }
+                    }
+                }
+
+            }
+        }
+        
+    }
+}
+
 @media screen and ( min-width: 1025px ) {
     .menu-primary {
         background: color( black );
