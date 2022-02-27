@@ -9,4 +9,12 @@ return [
     'selected' => function( $page, $selection ) {
         return Str::contains( $page->getPath(), $selection ) ? 'active' : '';
     },
+
+    'collections' => [
+        'blog' => [
+            'author' => 'Benjamin Lu',
+            'path'  => 'blog/{filename}',
+            'sort' => [ '-date' ],
+        ]
+    ],
 ];
