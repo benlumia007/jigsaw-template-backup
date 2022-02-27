@@ -1,15 +1,11 @@
 <?php
-
 use Illuminate\Support\Str;
 
 return [
-    'siteName'        => 'Benjamin Lu',
-    'siteDescription' => 'Life & Joy',
-
-    'selected' => function( $page, $selection ) {
-        return Str::contains( $page->getPath(), $selection ) ? 'active' : '';
-    },
-
+    'production' => false,
+    'baseUrl' => '',
+    'siteTitle' => 'Benjamin Lu',
+    'siteDescription' => 'Life: The Joy of Blogging',
     'collections' => [
         'posts' => [
             'author' => 'Benjamin Lu',
@@ -17,6 +13,10 @@ return [
             'sort' => [ '-date' ],
         ]
     ],
+
+    'selected' => function( $page, $selection ) {
+        return Str::contains( $page->getPath(), $selection ) ? 'active' : '';
+    },
 
     'getExcerpt' => function ( $page, $length = 255 ) {
         if ( $page->excerpt ) {

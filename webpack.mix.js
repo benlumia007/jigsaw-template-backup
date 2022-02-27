@@ -1,27 +1,13 @@
-const mix = require( 'laravel-mix' );
-const build = require( './tasks/build' );
-require( 'laravel-mix-jigsaw' );
+const mix = require('laravel-mix');
+require('laravel-mix-jigsaw');
 
 mix.disableSuccessNotifications();
-mix.setPublicPath( 'source/assets/scripts' );
-
-mix.webpackConfig({
-    plugins: [
-        build.jigsaw,
-        build.browserSync(),
-        build.watch([
-            'config.php',
-            'source/*.php',
-            'source/**/*.md',
-            'source/**/*.php',
-            'source/**/*.scss',
-        ]),
-    ],
-});
+mix.setPublicPath('source/assets/scripts');
 
 mix.jigsaw()
-    .js( 'resources/js/app.js', 'js' )
-    .sass( 'resources/scss/screen.scss', 'css/screen.css' )
-    .options( {
-        processCssUrls: false
-    } )
+    .js('source/_assets/js/app.js', 'js')
+    .sass('source/_assets/scss/screen.scss', 'css' )
+    .options({
+        processCssUrls: false,
+    })
+    .version();

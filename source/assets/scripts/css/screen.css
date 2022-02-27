@@ -51,6 +51,16 @@ h6 {
   margin: 2.33em 0;
 }
 
+@media screen and (min-width: 1170px) {
+  .site-content {
+    margin: 3rem 0;
+  }
+  .site-content .content-area {
+    line-height: 1.8rem;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+}
 .site-header {
   background: #fcfcfc;
   border-bottom: 0.063em solid #f3f3f3;
@@ -109,37 +119,4 @@ h6 {
     pointer-events: none;
     cursor: default;
   }
-}
-@media screen and (min-width: 1170px) {
-  .site-content {
-    margin: 3rem 0;
-  }
-  .site-content .content-area {
-    line-height: 1.8rem;
-    margin: 0 auto;
-    max-width: 640px;
-  }
-}
-@media screen and (min-width: 1170px) {
-  .content-area .post {
-    margin-bottom: 3rem;
-  }
-  .content-area .post .entry-header .entry-metadata {
-    margin: 0.5rem 0;
-  }
-  .content-area .post .entry-header .entry-title {
-    margin: 0;
-    padding: 0;
-  }
-}
-.site-footer {
-  background: #fcfcfc;
-  border-top: 0.063em solid #f3f3f3;
-  padding: 1.25rem;
-}
-.site-footer .site-info {
-  text-align: center;
-}
-.site-footer .site-info .credit {
-  font-style: italic;
 }

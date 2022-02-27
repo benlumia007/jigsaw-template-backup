@@ -1,62 +1,20 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
+/***/ "./source/_assets/js/app.js":
+/*!**********************************!*\
+  !*** ./source/_assets/js/app.js ***!
+  \**********************************/
 /***/ (() => {
 
-/**
- * Primary front-end script.
- *
- * Primary JavaScript file. Any includes or anything imported should be filtered through this file 
- * and eventually saved back into the `/assets/js/app.js` file.
- *
- * @package   Initiator
- * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2019-2020 Benjamin Lu
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://github.com/benlumia007/initiator
- */
 
-/**
- * A simple immediately-invoked function expression to kick-start
- * things and encapsulate our code.
- *
- * @since  1.0.0 
- * @access public
- * @return void
- */
-(function () {
-  var button, currentLocation, menuItems, menuLength;
-  button = document.getElementsByTagName('button')[0];
-
-  button.onclick = function () {
-    if (-1 !== button.className.indexOf('toggled')) {
-      button.className = button.className.replace(' toggled', '');
-    } else {
-      button.className += ' toggled';
-    }
-  };
-
-  currentLocation = location.href;
-  menuItems = document.querySelectorAll('.menu-items .menu-item a');
-  menuLength = menuItems.length;
-
-  for (var i = 0; i < menuLength; i++) {
-    if (menuItems[i].href === currentLocation) {
-      menuItems[i].className = "active";
-    }
-  }
-})();
 
 /***/ }),
 
-/***/ "./resources/scss/screen.scss":
-/*!************************************!*\
-  !*** ./resources/scss/screen.scss ***!
-  \************************************/
+/***/ "./source/_assets/scss/screen.scss":
+/*!*****************************************!*\
+  !*** ./source/_assets/scss/screen.scss ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -203,8 +161,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/screen"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/screen"], () => (__webpack_require__("./resources/scss/screen.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/screen"], () => (__webpack_require__("./source/_assets/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/screen"], () => (__webpack_require__("./source/_assets/scss/screen.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

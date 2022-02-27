@@ -21,7 +21,7 @@
         <header id="masthead" class="site-header">
             <div class="branding-navigation">
                 <div class="site-branding">
-                    <h1 class="site-title"><a href="/">{{ $page->siteName }}</a></h1>
+                    <h1 class="site-title"><a href="/">{{ $page->siteTitle }}</a></h1>
                     <h3 class="site-description">{{ $page->siteDescription }}</h3>
                 </div>
                 <nav id="primary" class="menu-primary">
