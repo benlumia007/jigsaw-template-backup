@@ -36,6 +36,6 @@ return [
             $truncated .= '</code>';
         }
 
-        return strlen( $cleaned) > $length ? preg_replace('/\s+?(\S+)?$/', '', $truncated) . '...' : $cleaned;
+        return strlen( $cleaned ) > $length ? preg_replace('/\s+?(\S+)?$/', '', $truncated ) . '...' : $cleaned;
     },
 ];
