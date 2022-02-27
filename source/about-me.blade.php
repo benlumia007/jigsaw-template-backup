@@ -1,7 +1,7 @@
-@extends( '_layouts.home' )
+@extends( '_layouts.main' )
 
 @section( 'body' )
     <section id="content" class="site-content">
-        about me
+        hello there
     </section>
 @endsection

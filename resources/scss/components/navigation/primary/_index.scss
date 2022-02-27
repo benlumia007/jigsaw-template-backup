@@ -21,6 +21,12 @@
                     border-bottom: none;
                     color: color( white );
                     text-decoration: none;
+
+                    &.active {
+                        color: #000000;
+                        pointer-events: none;
+                        cursor: default;
+                    }
                 }
             }
         }

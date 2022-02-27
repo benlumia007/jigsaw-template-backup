@@ -11,7 +11,7 @@ return [
     },
 
     'collections' => [
-        'blog' => [
+        'posts' => [
             'author' => 'Benjamin Lu',
             'path'  => 'blog/{filename}',
             'sort' => [ '-date' ],
