@@ -1,5 +1,6 @@
 body {
   font-family: var(--font-family-primary, "Merriweather", serif);
+  margin: 0;
 }
 
 h1 {
@@ -111,8 +112,24 @@ h6 {
 }
 @media screen and (min-width: 1170px) {
   .site-content {
-    background: red;
     margin: 3rem 0;
+  }
+  .site-content .content-area {
+    line-height: 1.8rem;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .content-area .post {
+    margin-bottom: 3rem;
+  }
+  .content-area .post .entry-header .entry-metadata {
+    margin: 0.5rem 0;
+  }
+  .content-area .post .entry-header .entry-title {
+    margin: 0;
+    padding: 0;
   }
 }
 .site-footer {
