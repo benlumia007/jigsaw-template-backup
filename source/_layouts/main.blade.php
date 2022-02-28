@@ -30,7 +30,9 @@
                 <nav id="primary" class="menu-primary">
                     <button class="menu-toggle"><?= e( 'Menu' ); ?></button>
                     <ul class="menu-items">
-                        <li class="menu-item"><a class="{{ $page->selected('about-me') }}" href="/about-me">About Me</a></li>
+                        @foreach ( $page->primaryMenu as $menu )
+                            <li class="menu-item"><a class="{{ $page->selected( str_replace( '/','', $menu->link ) ) }}" href="{{ $menu->link }}">{{ $menu->title }}</a></li>
+                        @endforeach
                     </ul>
                 </nav>
             </div>

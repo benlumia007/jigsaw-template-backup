@@ -18,7 +18,7 @@ return [
     'collections' => [
         'posts' => [
             'author' => 'Benjamin Lu',
-            'path'  => 'blog/{filename}',
+            'path'  => 'blog/{-title}',
             'sort' => '-date',
             'getDate' => function( $page ) {
                 return Datetime::createFromFormat('U', $page->date );
