@@ -6,11 +6,27 @@ return [
     'baseUrl' => '',
     'siteTitle' => 'Benjamin Lu',
     'siteDescription' => 'Life: The Joy of Blogging',
+
+    'primaryMenu' => [ 
+        [
+            'link' => '/about-me',
+            'slug' => 'about-me',
+            'title' => 'About Me'
+        ]
+    ],
+
+    'owner' => [
+        'name' => 'John Doe',
+    ],
+
     'collections' => [
         'posts' => [
             'author' => 'Benjamin Lu',
             'path'  => 'blog/{filename}',
-            'sort' => [ '-date' ],
+            'sort' => '-date',
+            'getDate' => function( $page ) {
+                return Datetime::createFromFormat('U', $page->date );
+            }
         ]
     ],
 
@@ -18,7 +34,7 @@ return [
         return Str::contains( $page->getPath(), $selection ) ? 'active' : '';
     },
 
-    'getExcerpt' => function ( $page, $length = 255 ) {
+    'getExcerpt' => function( $page, $length = 255 ) {
         if ( $page->excerpt ) {
             return $page->excerpt;
         }
