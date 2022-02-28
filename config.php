@@ -15,10 +15,6 @@ return [
         ]
     ],
 
-    'owner' => [
-        'name' => 'John Doe',
-    ],
-
     'collections' => [
         'posts' => [
             'author' => 'Benjamin Lu',
