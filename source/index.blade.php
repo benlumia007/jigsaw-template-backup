@@ -7,7 +7,7 @@
                 <article class="post">
                     <header class="entry-header">
                         <div class="entry-metadata">
-                            <span class="entry-date">{{ date('F d, Y', $post->date) }}</span>
+                            <span class="entry-date">{{ $post->getDate()->format( 'F d, Y' ) }}</span>
                         </div>
                         <h1 class="entry-title"><a href="{{ $post->getUrl() }}">{{ $post->title }}</a></h1>
                     </header>
