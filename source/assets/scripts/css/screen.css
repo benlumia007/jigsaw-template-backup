@@ -60,13 +60,41 @@ h6 {
     margin: 2.25rem;
   }
 }
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
   .site-content {
     margin: 3rem 0;
   }
   .site-content .content-area {
     line-height: 1.8rem;
-    margin: 0 auto;
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .site-content {
+    margin: 3rem 0;
+  }
+  .site-content .content-area {
+    line-height: 1.8rem;
+    margin: 2.25rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .site-content {
+    margin: 3rem 0;
+  }
+  .site-content .content-area {
+    line-height: 1.8rem;
+    margin: 2.25rem auto;
+    max-width: 40rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .site-content {
+    margin: 3rem 0;
+  }
+  .site-content .content-area {
+    line-height: 1.8rem;
+    margin: 2.25rem auto;
     max-width: 640px;
   }
 }
@@ -89,7 +117,45 @@ h6 {
     text-decoration: none;
   }
 }
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .site-header {
+    background: #fcfcfc;
+    border-bottom: 0.063em solid #f3f3f3;
+  }
+  .site-header .branding-navigation .site-branding {
+    padding: 1.125rem;
+    text-align: center;
+  }
+  .site-header .branding-navigation .site-branding .site-title,
+.site-header .branding-navigation .site-branding .site-description {
+    margin: 0;
+    padding: 0;
+  }
+  .site-header .branding-navigation .site-branding .site-title a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .site-header {
+    background: #fcfcfc;
+    border-bottom: 0.063em solid #f3f3f3;
+  }
+  .site-header .branding-navigation .site-branding {
+    padding: 1.125rem;
+    text-align: center;
+  }
+  .site-header .branding-navigation .site-branding .site-title,
+.site-header .branding-navigation .site-branding .site-description {
+    margin: 0;
+    padding: 0;
+  }
+  .site-header .branding-navigation .site-branding .site-title a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .site-header {
     background: #fcfcfc;
     border-bottom: 0.063em solid #f3f3f3;
@@ -116,8 +182,37 @@ h6 {
   }
   .site-header .branding-navigation .site-branding .site-description {
     float: left;
-    font-size: 1.25rem;
-    padding: 1rem;
+    padding: 1.125rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .site-header {
+    background: #fcfcfc;
+    border-bottom: 0.063em solid #f3f3f3;
+  }
+  .site-header .branding-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.25rem;
+  }
+  .site-header .branding-navigation .site-branding .site-title,
+.site-header .branding-navigation .site-branding .site-description {
+    margin: 0;
+    padding: 0;
+  }
+  .site-header .branding-navigation .site-branding .site-title {
+    float: left;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  .site-header .branding-navigation .site-branding .site-title a {
+    border-bottom: none;
+    color: #000000;
+    text-decoration: none;
+  }
+  .site-header .branding-navigation .site-branding .site-description {
+    float: left;
+    padding: 1.125rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -180,9 +275,129 @@ h6 {
     cursor: default;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
   .menu-primary {
+    display: block;
+    width: 100%;
+  }
+  .menu-primary .menu-toggle {
     background: #000000;
+    border: 0.125rem solid #ffffff;
+    bottom: 1.125rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: var(--font-family-primary, "Merriweather", serif);
+    left: 1.125rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    transition: all ease-out 300ms;
+  }
+  .menu-primary .menu-toggle.hide {
+    bottom: -2.25rem;
+  }
+  .menu-primary .menu-items {
+    background: #000000;
+    bottom: 1rem;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-primary .menu-items .menu-item {
+    margin: 0;
+    padding: 0.813rem 1rem;
+  }
+  .menu-primary .menu-items .menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .menu-primary.toggled {
+    bottom: 3rem;
+    margin: 0;
+    position: fixed;
+  }
+  .menu-primary.toggled .menu-toggle.hide {
+    bottom: 1.125rem;
+  }
+  .menu-primary.toggled .menu-items {
+    display: block;
+    margin: 1.125rem;
+  }
+  .menu-primary.toggled .menu-items .menu-item a {
+    border-bottom: none;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .menu-primary.toggled .menu-items .menu-item a.active {
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .menu-primary {
+    display: block;
+    width: 100%;
+  }
+  .menu-primary .menu-toggle {
+    background: #000000;
+    border: 0.125rem solid #ffffff;
+    bottom: 1.125rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: var(--font-family-primary, "Merriweather", serif);
+    left: 1.125rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    transition: all ease-out 300ms;
+  }
+  .menu-primary .menu-toggle.hide {
+    bottom: -2.25rem;
+  }
+  .menu-primary .menu-items {
+    background: #000000;
+    bottom: 1rem;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu-primary .menu-items .menu-item {
+    margin: 0;
+    padding: 0.813rem 1rem;
+  }
+  .menu-primary .menu-items .menu-item a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .menu-primary.toggled {
+    bottom: 3rem;
+    margin: 0;
+    position: fixed;
+  }
+  .menu-primary.toggled .menu-toggle.hide {
+    bottom: 1.125rem;
+  }
+  .menu-primary.toggled .menu-items {
+    display: block;
+    margin: 1.125rem;
+  }
+  .menu-primary.toggled .menu-items .menu-item a {
+    border-bottom: none;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .menu-primary.toggled .menu-items .menu-item a.active {
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .menu-primary {
+    background: transparent;
     padding: 0.5rem;
   }
   .menu-primary .menu-toggle {
@@ -200,7 +415,36 @@ h6 {
   }
   .menu-primary .menu-items .menu-item a {
     border-bottom: none;
-    color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+  }
+  .menu-primary .menu-items .menu-item a.active {
+    color: #000000;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .menu-primary {
+    background: transparent;
+    padding: 0.5rem;
+  }
+  .menu-primary .menu-toggle {
+    display: none;
+  }
+  .menu-primary .menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+  .menu-primary .menu-items .menu-item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+  .menu-primary .menu-items .menu-item a {
+    border-bottom: none;
+    color: #000000;
     text-decoration: none;
   }
   .menu-primary .menu-items .menu-item a.active {
