@@ -14,10 +14,10 @@
             left: 1.125rem;
             padding: 0.5rem 1rem;
             position: fixed;
+            transition: all ease-out 300ms;
 
             &.hide {
                 bottom: -2.25rem;
-                transition: ease-in-out 0.5;
             }
         }
     
@@ -44,6 +44,12 @@
             bottom: 3rem;
             margin: 0;
             position: fixed;
+
+            .menu-toggle {
+                &.hide {
+                    bottom: 1.125rem;
+                }
+            }
 
             .menu-items {
                 display: block;

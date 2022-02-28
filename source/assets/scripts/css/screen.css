@@ -136,10 +136,10 @@ h6 {
     left: 1.125rem;
     padding: 0.5rem 1rem;
     position: fixed;
+    transition: all ease-out 300ms;
   }
   .menu-primary .menu-toggle.hide {
     bottom: -2.25rem;
-    transition: ease-in-out 0.5;
   }
   .menu-primary .menu-items {
     background: #000000;
@@ -161,6 +161,9 @@ h6 {
     bottom: 3rem;
     margin: 0;
     position: fixed;
+  }
+  .menu-primary.toggled .menu-toggle.hide {
+    bottom: 1.125rem;
   }
   .menu-primary.toggled .menu-items {
     display: block;
