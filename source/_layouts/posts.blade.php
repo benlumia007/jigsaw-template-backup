@@ -10,11 +10,18 @@
                     </div>
                     <h1 class="entry-title">{{ $page->title }}</h1>
                 </header>
-                <figure class="post-thumbnail alignwide">
-                    <img src="{{ $page->thumbnail }}" />
-                </figure> 
+                @if ( $page->thumbnail )
+                    <figure class="post-thumbnail alignwide">
+                        <img src="{{ $page->thumbnail }}" />
+                    </figure> 
+                @endif
                 <div class="entry-content">
                     @yield( 'content' )
+                </div>
+                <div class="entry-footer">
+                    @foreach ($page->categories as $category )
+                        <a href="/category/{{ $category }}">{{ $category }}</a>
+                    @endforeach
                 </div>
             </article>
         </div>
