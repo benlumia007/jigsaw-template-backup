@@ -2,6 +2,10 @@
 use Illuminate\Support\Str;
 
 return [
+    'build' => [
+        'source' => 'public',
+    ],
+
     'production' => false,
     'baseUrl' => '',
     'siteTitle' => 'Benjamin Lu',
