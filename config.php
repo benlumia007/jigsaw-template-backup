@@ -14,7 +14,6 @@ return [
     'primaryMenu' => [ 
         [
             'link' => '/about-me',
-            'slug' => 'about-me',
             'title' => 'About Me'
         ]
     ],
