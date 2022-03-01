@@ -21,16 +21,3 @@ mix.jigsaw()
         server: 'build_local',
         files: ['build_*/**'],
     });
-
-// Override the default config
-mix.jigsaw({
-    watch: {
-        files: [
-            'config.php',
-            'source/*.php',
-            'source/**/*.md',
-            'source/**/*.php',
-            'source/**/*.scss',
-        ]
-    },
-});
